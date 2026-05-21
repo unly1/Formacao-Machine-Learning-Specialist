@@ -1,0 +1,21 @@
+Carregando o dataset MNIST...
+Dimensões do tensor de imagens: torch.Size([1, 28, 28])
+Dimensões do tensor de etiquetas: torch.Size([])
+Modelo enviado para o dispositivo: cpu
+
+--- Iniciando Treinamento ---
+Época 01/10 - Perda resultante: 1.187291
+Época 02/10 - Perda resultante: 0.375225
+Época 03/10 - Perda resultante: 0.305301
+Época 04/10 - Perda resultante: 0.265989
+Época 05/10 - Perda resultante: 0.235655
+Época 06/10 - Perda resultante: 0.210589
+Época 07/10 - Perda resultante: 0.189583
+Época 08/10 - Perda resultante: 0.172115
+Época 09/10 - Perda resultante: 0.157260
+Época 10/10 - Perda resultante: 0.144880
+Tempo de treino (em minutos) = 0.35
+
+--- Iniciando Validação ---
+Total de imagens testadas = 10000
+Precisão do modelo = 95.85%
