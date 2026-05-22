@@ -1,0 +1,48 @@
+Resultado gerado em: 22/05/2026 15:52:23
+============================================================
+
+Ambiente : CartPole-v1
+Estados  : 4  |  Ações: 2
+
+Model: "sequential"
+┌─────────────────────────────────┬────────────────────────┬───────────────┐
+│ Layer (type)                    │ Output Shape           │       Param # │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense (Dense)                   │ (None, 64)             │           320 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_1 (Dense)                 │ (None, 64)             │         4,160 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_2 (Dense)                 │ (None, 2)              │           130 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 4,610 (18.01 KB)
+ Trainable params: 4,610 (18.01 KB)
+ Non-trainable params: 0 (0.00 B)
+Iniciando treinamento...
+
+Ep   20 | Score médio (últimos 20):   18.1 | epsilon: 0.905
+Ep   40 | Score médio (últimos 20):   22.3 | epsilon: 0.818
+Ep   60 | Score médio (últimos 20):   21.9 | epsilon: 0.740
+Ep   80 | Score médio (últimos 20):   31.1 | epsilon: 0.670
+Ep  100 | Score médio (últimos 20):   50.0 | epsilon: 0.606
+Ep  120 | Score médio (últimos 20):   64.0 | epsilon: 0.548
+Ep  140 | Score médio (últimos 20):   85.2 | epsilon: 0.496
+Ep  160 | Score médio (últimos 20):   64.0 | epsilon: 0.448
+Ep  180 | Score médio (últimos 20):  123.3 | epsilon: 0.406
+Ep  200 | Score médio (últimos 20):   90.0 | epsilon: 0.367
+Ep  220 | Score médio (últimos 20):   77.8 | epsilon: 0.332
+Ep  240 | Score médio (últimos 20):   80.2 | epsilon: 0.300
+Ep  260 | Score médio (últimos 20):   78.5 | epsilon: 0.272
+Ep  280 | Score médio (últimos 20):  122.2 | epsilon: 0.246
+Ep  300 | Score médio (últimos 20):  166.5 | epsilon: 0.222
+Ep  320 | Score médio (últimos 20):  159.2 | epsilon: 0.201
+Ep  340 | Score médio (últimos 20):   91.2 | epsilon: 0.182
+Ep  360 | Score médio (últimos 20):   73.8 | epsilon: 0.165
+Ep  380 | Score médio (últimos 20):  108.5 | epsilon: 0.149
+Ep  400 | Score médio (últimos 20):  119.1 | epsilon: 0.135
+Ep  420 | Score médio (últimos 20):   98.0 | epsilon: 0.122
+Ep  440 | Score médio (últimos 20):   98.4 | epsilon: 0.110
+Ep  460 | Score médio (últimos 20):   80.5 | epsilon: 0.100
+Ep  480 | Score médio (últimos 20):  101.0 | epsilon: 0.090
+Ep  500 | Score médio (últimos 20):  105.6 | epsilon: 0.082
+
+Modelo salvo em 'C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Algoritmos de Treinamento em Machine Learning\Aprendizado por Reforço em Machine Learning\resultado\dqn_cartpole.keras'
