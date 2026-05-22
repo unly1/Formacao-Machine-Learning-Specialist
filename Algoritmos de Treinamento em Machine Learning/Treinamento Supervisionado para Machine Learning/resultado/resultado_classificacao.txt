@@ -1,4 +1,4 @@
-Resultado gerado em: 22/05/2026 11:13:14
+Resultado gerado em: 22/05/2026 11:18:28
 ============================================================
 
 Dataset carregado: 150 amostras, 4 features
@@ -27,5 +27,5 @@ Matriz de Confusão:
  [ 0  9  1]
  [ 0  2  8]]
 
-Modelo salvo em 'c:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Algoritmos de Treinamento em Machine Learning\Treinamento Supervisionado para Machine Learning\resultado\modelo_classificacao.pkl'
-Scaler salvo em 'c:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Algoritmos de Treinamento em Machine Learning\Treinamento Supervisionado para Machine Learning\resultado\scaler.pkl'
+Modelo salvo em 'C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Algoritmos de Treinamento em Machine Learning\Treinamento Supervisionado para Machine Learning\resultado\modelo_classificacao.pkl'
+Scaler salvo em 'C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Algoritmos de Treinamento em Machine Learning\Treinamento Supervisionado para Machine Learning\resultado\scaler.pkl'
