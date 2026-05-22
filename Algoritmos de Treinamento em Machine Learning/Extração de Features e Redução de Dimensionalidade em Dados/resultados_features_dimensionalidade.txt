@@ -1,0 +1,117 @@
+⚠  umap-learn não instalado. Pulando UMAP.
+==============================================================
+  CARREGANDO DATASETS
+==============================================================
+Digits : (1797, 64)  | classes: [0 1 2 3 4 5 6 7 8 9]
+Wine   : (178, 13) | classes: [0 1 2]
+Sintético: (2000, 30) | classes: [0 1]
+
+==============================================================
+  1. ENGENHARIA / EXTRAÇÃO DE FEATURES
+==============================================================
+
+[PolynomialFeatures grau=2]
+  Wine original :  13 features
+  Após Poly     : 104 features
+
+[Interações manuais par-a-par]
+  Features após interação: 91
+
+[Rolling features — série temporal]
+       valor  rolling_mean_5  rolling_std_5  rolling_min_10  rolling_max_10     lag_1     lag_2
+9   4.480611        3.705431       0.981934        0.358450        4.480611  3.938051  4.407525
+10  4.017193        4.096694       0.347844        0.358450        4.480611  4.480611  3.938051
+11  3.551464        4.078969       0.377889        1.006138        4.480611  4.017193  4.480611
+
+==============================================================
+  2. REDUÇÃO DE DIMENSIONALIDADE — LINEAR
+==============================================================
+
+[PCA — Digits 64 features]
+  Componentes para 95% variância: 40
+  Variância explicada (2 CP)    : 21.59%
+  PCA (n95)                      | original: 0.919  reduzido: 0.914
+
+[LDA — Wine 13→2]
+  Variância explicada : 100.00%
+  LDA (2 comp)                   | original: 0.989  reduzido: 1.000
+
+[TruncatedSVD — Digits 64→2]
+  Variância explicada : 21.59%
+
+[ICA — Digits 64→2]  (componentes independentes)
+
+==============================================================
+  3. REDUÇÃO DE DIMENSIONALIDADE — NÃO-LINEAR
+==============================================================
+
+Aplicando técnicas de manifold (sub-amostra 600)...
+  t-SNE   ✓
+  Isomap  ✓
+  LLE     ✓
+
+==============================================================
+  4. SELEÇÃO DE FEATURES
+==============================================================
+
+[VarianceThreshold=0.1]
+  30 → 30 features
+
+[Correlação > 0.85 removida]
+  30 → 30 features  (removidas: 0)
+
+[SelectKBest F-score k=10]
+  30 → 10 features
+  Top features: [7, 8, 12, 13, 14, 18, 20, 25, 26, 28]
+
+[SelectKBest Mutual Information k=10]
+  Top features: [1, 7, 8, 12, 13, 14, 18, 24, 25, 26]
+
+[RFE — Random Forest, 10 features]
+  Selecionadas: [8, 12, 13, 14, 16, 18, 21, 24, 25, 26]
+
+[RFECV — Logistic Regression]
+  Nº ótimo de features: 29
+  Features selecionadas: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29]
+
+==============================================================
+  5. GERANDO VISUALIZAÇÕES
+==============================================================
+  pca_variancia.png ✓
+  reducao_linear.png ✓
+  manifold.png ✓
+  feature_selection_scores.png ✓
+  rfecv.png ✓
+  correlacao.png ✓
+
+==============================================================
+  RESUMO
+==============================================================
+                    Técnica  Entrada  Saída              Tipo
+PolynomialFeatures (grau 2)       13    104          Extração
+              PCA (95% var)       64     40       Red. Linear
+                        LDA       13      2 Red. Linear (sup)
+                   TruncSVD       64      2       Red. Linear
+                        ICA       64      2       Red. Linear
+                      t-SNE       20      2   Red. Não-linear
+                     Isomap       20      2   Red. Não-linear
+                        LLE       20      2   Red. Não-linear
+          VarianceThreshold       30     30           Seleção
+            Correlação Alta       30     30           Seleção
+        SelectKBest F-score       30     10           Seleção
+             SelectKBest MI       30     10           Seleção
+        RFE (Random Forest)       30     10           Seleção
+             RFECV (LogReg)       30     29           Seleção
+
+Resultados salvos em: c:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Algoritmos de Treinamento em Machine Learning\Extração de Features e Redução de Dimensionalidade em Dados\resultados_features_dimensionalidade.txt
+Figuras salvas no diretório: c:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Algoritmos de Treinamento em Machine Learning\Extração de Features e Redução de Dimensionalidade em Dados\outputs
+
+Arquivos de imagem gerados:
+  • pca_variancia.png
+  • reducao_linear.png
+  • manifold.png
+  • feature_selection_scores.png
+  • rfecv.png
+  • correlacao.png
+
+Script finalizado com sucesso!
