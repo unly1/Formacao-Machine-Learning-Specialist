@@ -27,16 +27,21 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 # Buffer para capturar todo o output e salvar no .txt
 _buffer = io.StringIO()
 
+
 class _Tee:
     """Redireciona o print para o terminal E para o buffer ao mesmo tempo."""
+
     def __init__(self, *streams):
         self.streams = streams
+
     def write(self, data):
         for s in self.streams:
             s.write(data)
+
     def flush(self):
         for s in self.streams:
             s.flush()
+
 
 sys.stdout = _Tee(sys.__stdout__, _buffer)
 
@@ -73,7 +78,7 @@ print(f"Treino: {len(X_train)} amostras | Teste: {len(X_test)} amostras\n")
 # ─────────────────────────────────────────
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)  # fit apenas no treino
-X_test  = scaler.transform(X_test)       # aplica a mesma escala no teste
+X_test = scaler.transform(X_test)       # aplica a mesma escala no teste
 
 # ─────────────────────────────────────────
 # 4. DEFINIR E TREINAR O MODELO
@@ -137,7 +142,8 @@ path_resultado = OUTPUT_DIR / "resultado_classificacao.txt"
 conteudo = _buffer.getvalue()
 
 with open(path_resultado, "w", encoding="utf-8") as f:
-    f.write(f"Resultado gerado em: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}\n")
+    f.write(
+        f"Resultado gerado em: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}\n")
     f.write("=" * 60 + "\n\n")
     f.write(conteudo)
 
