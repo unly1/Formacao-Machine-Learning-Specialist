@@ -1,0 +1,31 @@
+Resultado gerado em: 22/05/2026 11:13:14
+============================================================
+
+Dataset carregado: 150 amostras, 4 features
+Classes: ['setosa' 'versicolor' 'virginica']
+
+Treino: 120 amostras | Teste: 30 amostras
+
+Treinando o modelo...
+Treinamento concluído!
+
+Acurácia no teste: 90.00%
+
+Relatório de Classificação:
+              precision    recall  f1-score   support
+
+      setosa       1.00      1.00      1.00        10
+  versicolor       0.82      0.90      0.86        10
+   virginica       0.89      0.80      0.84        10
+
+    accuracy                           0.90        30
+   macro avg       0.90      0.90      0.90        30
+weighted avg       0.90      0.90      0.90        30
+
+Matriz de Confusão:
+[[10  0  0]
+ [ 0  9  1]
+ [ 0  2  8]]
+
+Modelo salvo em 'c:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Algoritmos de Treinamento em Machine Learning\Treinamento Supervisionado para Machine Learning\resultado\modelo_classificacao.pkl'
+Scaler salvo em 'c:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Algoritmos de Treinamento em Machine Learning\Treinamento Supervisionado para Machine Learning\resultado\scaler.pkl'
