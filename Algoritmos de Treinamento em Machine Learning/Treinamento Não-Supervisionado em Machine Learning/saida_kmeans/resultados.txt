@@ -1,0 +1,8 @@
+=== RESULTADOS DA EXECUÇÃO DO K-MEANS ===
+
+Dimensões do dataset Digits: (1797, 64)
+Dimensões dos centros dos clusters (Digits): (10, 64)
+Acurácia simples do K-Means nos Digits: 0.7440 (74.40%)
+Acurácia do K-Means após pré-processamento com t-SNE: 0.9410 (94.10%)
+Dimensões da imagem China: (427, 640, 3)
+Dimensões dos dados reescalados da China: (273280, 3)
