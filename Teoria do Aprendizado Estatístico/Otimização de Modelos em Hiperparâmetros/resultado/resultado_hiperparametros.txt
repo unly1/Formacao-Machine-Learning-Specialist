@@ -1,0 +1,254 @@
+=================================================================
+   OTIMIZAÇÃO DE MODELOS EM HIPERPARÂMETROS
+   Referência: Ajuste em Redes de Deep Learning (MLP)
+   Formação Machine Learning Specialist
+=================================================================
+   Gerado em: 23/05/2026 13:54:16
+=================================================================
+
+O QUE SÃO HIPERPARÂMETROS?
+  São configurações definidas ANTES do treinamento. Diferente
+  dos parâmetros (pesos), eles não são aprendidos pelo modelo.
+
+HIPERPARÂMETROS DE ARQUITETURA (estrutura da rede):
+  • num_layers    : número de camadas ocultas
+  • neurons       : neurônios por camada
+  • activation    : função de ativação (ReLU, Tanh, Sigmoid)
+
+HIPERPARÂMETROS DE TREINAMENTO (processo de aprendizado):
+  • learning_rate : tamanho do passo no gradiente descendente
+  • batch_size    : amostras por atualização de peso
+  • epochs        : número de ciclos completos sobre o dataset
+  • optimizer     : algoritmo de otimização (SGD, Adam, RMSProp)
+
+HIPERPARÂMETROS DE REGULARIZAÇÃO (combate ao overfitting):
+  • dropout_rate  : fração de neurônios desativados por época
+
+ESPAÇO DE BUSCA DEFINIDO:
+  • learning_rate     : [0.1, 0.01, 0.001, 0.0001]
+  • epochs            : [10, 30, 50]
+  • batch_size        : [16, 32, 64]
+  • neurons           : [32, 64, 128]
+  • dropout_rate      : [0.0, 0.2, 0.5]
+  • activation        : ['relu', 'tanh', 'sigmoid']
+  • optimizer         : ['sgd', 'adam', 'rmsprop']
+  • num_layers        : [1, 2, 3]
+
+  Total de combinações possíveis: 8,748
+
+=================================================================
+  ESTRATÉGIAS DE BUSCA DE HIPERPARÂMETROS
+=================================================================
+
+1. GRID SEARCH (Busca em Grade)
+   Testa sistematicamente todas as combinações.
+   Vantagem : garante encontrar o melhor no espaço definido.
+   Desvantagem: custo computacional exponencial (maldição
+   da dimensionalidade).
+
+2. RANDOM SEARCH (Busca Aleatória)
+   Amostra aleatoriamente o espaço de configurações.
+   Vantagem : eficiente — cobre bem espaços grandes.
+   Referência: Bergstra & Bengio (2012) mostraram que
+   Random Search supera Grid Search na maioria dos casos.
+
+3. BAYESIAN OPTIMIZATION (referência teórica)
+   Usa modelo probabilístico (ex: Gaussian Process) para
+   guiar a busca. Implementações: Optuna, Hyperopt, KerasTuner.
+
+4. EARLY STOPPING
+   Interrompe o treino quando a val_loss para de melhorar.
+   Evita overfitting e economiza tempo de computação.
+
+=================================================================
+  RESULTADO — GRID SEARCH (30 combinações amostradas)
+=================================================================
+
+  #     Acurácia    Loss  Hiperparâmetros
+  ------------------------------------------------------------
+  1      0.8460  0.1691  lr=0.0001 | opt=sgd | act=relu
+       [████████████████    ]  layers=3 | neurons=128 | drop=0.5
+  2      0.8278  0.1280  lr=0.001 | opt=rmsprop | act=tanh
+       [████████████████    ]  layers=2 | neurons=128 | drop=0.5
+  3      0.7776  0.2698  lr=0.0001 | opt=rmsprop | act=sigmoid
+       [███████████████     ]  layers=3 | neurons=128 | drop=0.0
+  4      0.7718  0.2482  lr=0.001 | opt=sgd | act=sigmoid
+       [███████████████     ]  layers=3 | neurons=128 | drop=0.0
+  5      0.7579  0.2893  lr=0.001 | opt=adam | act=sigmoid
+       [███████████████     ]  layers=3 | neurons=32 | drop=0.0
+  6      0.7381  0.3308  lr=0.0001 | opt=rmsprop | act=sigmoid
+       [██████████████      ]  layers=3 | neurons=64 | drop=0.2
+  7      0.6303  0.4669  lr=0.0001 | opt=sgd | act=sigmoid
+       [████████████        ]  layers=3 | neurons=128 | drop=0.2
+  8      0.6276  0.4679  lr=0.01 | opt=adam | act=sigmoid
+       [████████████        ]  layers=2 | neurons=128 | drop=0.5
+  9      0.6264  0.4506  lr=0.01 | opt=rmsprop | act=relu
+       [████████████        ]  layers=1 | neurons=128 | drop=0.5
+  10     0.5751  0.5274  lr=0.01 | opt=rmsprop | act=sigmoid
+       [███████████         ]  layers=1 | neurons=64 | drop=0.5
+
+  ★ MELHOR CONFIGURAÇÃO (Grid Search):
+    • learning_rate     : 0.0001
+    • epochs            : 50
+    • batch_size        : 32
+    • neurons           : 128
+    • dropout_rate      : 0.5
+    • activation        : relu
+    • optimizer         : sgd
+    • num_layers        : 3
+    → Acurácia : 0.8460 (84.60%)
+    → Loss     : 0.1691
+
+=================================================================
+  RESULTADO — RANDOM SEARCH (20 iterações)
+=================================================================
+
+  #     Acurácia    Loss  Hiperparâmetros
+  ------------------------------------------------------------
+  1      0.7826  0.2386  lr=0.001 | opt=rmsprop | act=relu
+       [███████████████     ]  layers=2 | neurons=32 | drop=0.5
+  2      0.7084  0.3274  lr=0.0001 | opt=rmsprop | act=tanh
+       [██████████████      ]  layers=3 | neurons=128 | drop=0.5
+  3      0.7024  0.3248  lr=0.001 | opt=adam | act=relu
+       [██████████████      ]  layers=2 | neurons=32 | drop=0.5
+  4      0.6901  0.3583  lr=0.0001 | opt=adam | act=relu
+       [█████████████       ]  layers=1 | neurons=64 | drop=0.5
+  5      0.6804  0.3725  lr=0.01 | opt=adam | act=sigmoid
+       [█████████████       ]  layers=3 | neurons=64 | drop=0.5
+  6      0.6678  0.3731  lr=0.0001 | opt=rmsprop | act=relu
+       [█████████████       ]  layers=2 | neurons=64 | drop=0.2
+  7      0.6504  0.4275  lr=0.0001 | opt=adam | act=sigmoid
+       [█████████████       ]  layers=2 | neurons=64 | drop=0.0
+  8      0.5714  0.5426  lr=0.001 | opt=rmsprop | act=sigmoid
+       [███████████         ]  layers=2 | neurons=32 | drop=0.0
+  9      0.5285  0.6666  lr=0.0001 | opt=rmsprop | act=relu
+       [██████████          ]  layers=1 | neurons=64 | drop=0.2
+  10     0.5206  0.6592  lr=0.0001 | opt=adam | act=relu
+       [██████████          ]  layers=1 | neurons=32 | drop=0.0
+
+  ★ MELHOR CONFIGURAÇÃO (Random Search):
+    • learning_rate     : 0.001
+    • epochs            : 50
+    • batch_size        : 64
+    • neurons           : 32
+    • dropout_rate      : 0.5
+    • activation        : relu
+    • optimizer         : rmsprop
+    • num_layers        : 2
+    → Acurácia : 0.7826 (78.26%)
+    → Loss     : 0.2386
+
+=================================================================
+  ANÁLISE DE IMPACTO POR HIPERPARÂMETRO
+=================================================================
+  (Variação = diferença entre o melhor e pior valor médio)
+
+  1. learning_rate      variação: 0.3831  [██████████████████████████████████████]
+       0.001        → acc médio: 0.6847
+       0.0001       → acc médio: 0.6234
+       0.01         → acc médio: 0.5262
+       0.1          → acc médio: 0.3016
+
+  2. epochs             variação: 0.2793  [███████████████████████████]
+       50           → acc médio: 0.5913
+       30           → acc médio: 0.4310
+       10           → acc médio: 0.3120
+
+  3. neurons            variação: 0.1492  [██████████████      ]
+       128          → acc médio: 0.5514
+       64           → acc médio: 0.4486
+       32           → acc médio: 0.4022
+
+  4. num_layers         variação: 0.1490  [██████████████      ]
+       3            → acc médio: 0.5348
+       2            → acc médio: 0.5222
+       1            → acc médio: 0.3858
+
+  5. batch_size         variação: 0.0920  [█████████           ]
+       32           → acc médio: 0.5233
+       64           → acc médio: 0.4631
+       16           → acc médio: 0.4313
+
+  6. optimizer          variação: 0.0684  [██████              ]
+       sgd          → acc médio: 0.4999
+       rmsprop      → acc médio: 0.4792
+       adam         → acc médio: 0.4315
+
+  7. dropout_rate       variação: 0.0463  [████                ]
+       0.5          → acc médio: 0.4950
+       0.0          → acc médio: 0.4566
+       0.2          → acc médio: 0.4487
+
+  8. activation         variação: 0.0357  [███                 ]
+       relu         → acc médio: 0.4908
+       sigmoid      → acc médio: 0.4716
+       tanh         → acc médio: 0.4551
+
+=================================================================
+  SIMULAÇÃO DE TREINO — MELHOR MODELO (GRID SEARCH)
+=================================================================
+
+  Época | Acurácia | Progresso
+  ---------------------------------------------
+      1 | 0.3003   | [█████████                     ]
+      6 | 0.3017   | [█████████                     ]
+     11 | 0.3032   | [█████████                     ]
+     16 | 0.3046   | [█████████                     ]
+     21 | 0.3060   | [█████████                     ]
+     26 | 0.3073   | [█████████                     ]
+     31 | 0.3087   | [█████████                     ]
+     36 | 0.3100   | [█████████                     ]
+     41 | 0.3114   | [█████████                     ]
+     46 | 0.3128   | [█████████                     ]
+
+  Acurácia final simulada : 0.8373 (83.73%)
+  Loss final simulada     : 0.1652
+
+=================================================================
+  COMPARAÇÃO FINAL DAS ESTRATÉGIAS
+=================================================================
+
+  Estratégia              Melhor Acurácia  Melhor Loss
+  ----------------------------------------------------
+  Grid Search                      0.8460       0.1691
+  Random Search                    0.7826       0.2386
+
+=================================================================
+  BOAS PRÁTICAS DE AJUSTE DE HIPERPARÂMETROS
+=================================================================
+
+  LEARNING RATE:
+  • É o hiperparâmetro mais crítico em Deep Learning
+  • Comece com 1e-3 (Adam) ou 1e-2 (SGD)
+  • Use Learning Rate Scheduler (ex: ReduceLROnPlateau)
+  • Visualize a curva de loss: se oscilar, reduza o LR
+
+  BATCH SIZE:
+  • Lotes menores (16-32): mais ruído, melhor generalização
+  • Lotes maiores (128+) : mais estável, mais rápido por época
+  • Regra prática: comece com 32
+
+  DROPOUT:
+  • Use 0.2–0.5 nas camadas ocultas para regularização
+  • Nunca aplique na camada de saída
+  • Combine com Batch Normalization para melhor resultado
+
+  ARQUITETURA:
+  • Comece simples (1-2 camadas) e aumente a complexidade
+  • ReLU é a ativação padrão para camadas ocultas
+  • Mais neurônios e camadas = mais capacidade e mais risco
+
+  OTIMIZADORES:
+  • Adam    : melhor ponto de partida (adaptativo)
+  • RMSProp : bom para RNNs e dados ruidosos
+  • SGD     : pode superar Adam com LR scheduler afinado
+
+  FERRAMENTAS RECOMENDADAS PARA PRODUÇÃO:
+  • Optuna      : Bayesian Optimization automático
+  • KerasTuner  : integrado ao TensorFlow/Keras
+  • Ray Tune    : busca distribuída em cluster
+  • Weights & Biases (wandb): rastreamento de experimentos
+
+=================================================================
+  Fim do Relatório
+=================================================================
