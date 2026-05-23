@@ -1,0 +1,58 @@
+=== RESULTADOS DA CLASSIFICAÇÃO COM INCEPTION V3 ===
+
+Imagem: imagens/panda.jpg
+Top-10 previsões:
+---------------------------------------------
+ 1.  94.78% : giant_panda
+ 2.   0.10% : soccer_ball
+ 3.   0.07% : lesser_panda
+ 4.   0.04% : teddy
+ 5.   0.04% : space_shuttle
+ 6.   0.03% : earthstar
+ 7.   0.03% : knee_pad
+ 8.   0.03% : white_stork
+ 9.   0.03% : gorilla
+10.   0.02% : indri
+
+Imagem: imagens/elephant.jpg
+Top-10 previsões:
+---------------------------------------------
+ 1.  96.09% : African_elephant
+ 2.   1.17% : tusker
+ 3.   0.88% : Indian_elephant
+ 4.   0.02% : mushroom
+ 5.   0.01% : medicine_chest
+ 6.   0.01% : zebra
+ 7.   0.01% : car_mirror
+ 8.   0.01% : king_penguin
+ 9.   0.01% : shower_curtain
+10.   0.01% : radio_telescope
+
+Imagem: imagens/cat.jpg
+Top-10 previsões:
+---------------------------------------------
+ 1.  40.79% : dining_table
+ 2.  18.85% : restaurant
+ 3.  10.28% : folding_chair
+ 4.   8.77% : desk
+ 5.   2.05% : barber_chair
+ 6.   1.01% : barbershop
+ 7.   0.90% : patio
+ 8.   0.86% : rocking_chair
+ 9.   0.74% : sewing_machine
+10.   0.56% : altar
+
+Imagem: imagens/dog.jpg
+Top-10 previsões:
+---------------------------------------------
+ 1.  87.99% : Samoyed
+ 2.   1.72% : Arctic_fox
+ 3.   0.90% : Pomeranian
+ 4.   0.82% : white_wolf
+ 5.   0.31% : keeshond
+ 6.   0.18% : Eskimo_dog
+ 7.   0.17% : Great_Pyrenees
+ 8.   0.08% : papillon
+ 9.   0.07% : kuvasz
+10.   0.07% : Japanese_spaniel
+
