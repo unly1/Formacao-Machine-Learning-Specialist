@@ -28,7 +28,7 @@ Top-10 previsões:
  9.   0.01% : shower_curtain
 10.   0.01% : radio_telescope
 
-Imagem: imagens/cat.jpg
+Imagem: imagens/dining_table.jpg
 Top-10 previsões:
 ---------------------------------------------
  1.  40.79% : dining_table

@@ -54,7 +54,8 @@ print(f"TensorFlow versão: {tf.__version__}")
 print(f"Keras versão: {tf.keras.__version__}")
 
 # Inicializa o arquivo de resultados TXT
-with open('resultado.txt', 'w', encoding='utf-8') as f:
+os.makedirs('resultado', exist_ok=True)
+with open('resultado/resultado.txt', 'w', encoding='utf-8') as f:
     f.write("=== RESULTADOS DA CLASSIFICAÇÃO COM INCEPTION V3 ===\n\n")
 
 """## 2. Carregar o Modelo InceptionV3
@@ -134,7 +135,7 @@ def classify(image_path, top_k=10):
     print()
 
     # Grava os resultados no arquivo de texto
-    with open('resultado.txt', 'a', encoding='utf-8') as f:
+    with open('resultado/resultado.txt', 'a', encoding='utf-8') as f:
         f.write(f"Imagem: {image_path}\n")
         f.write(f"Top-{top_k} previsões:\n")
         f.write("-" * 45 + "\n")
@@ -167,6 +168,8 @@ def plot_resized_image(image_path):
     axes[1].axis('off')
 
     plt.tight_layout()
+    basename = os.path.splitext(os.path.basename(image_path))[0]
+    plt.savefig(f"resultado/{basename}_resized.png", bbox_inches='tight')
     plt.show()
 
 
@@ -185,7 +188,6 @@ os.makedirs('imagens', exist_ok=True)
 os.makedirs('imagens_locais', exist_ok=True)
 
 # Dicionário de imagens de exemplo para download
-# Na imagem do gato o link não funciona. Então ele traz uma imagem aleatoria, porem no resultado ele classifica como mesa de jantar.
 sample_images = {
     'imagens/panda.jpg': [
         'https://storage.googleapis.com/download.tensorflow.org/example_images/Giant_Panda_2.jpeg',
@@ -198,7 +200,7 @@ sample_images = {
         'https://raw.githubusercontent.com/EliSchwartz/imagenet-sample-images/master/n02504458_African_elephant.JPEG',
         'https://picsum.photos/seed/elephant/400/300',
     ],
-    'imagens/cat.jpg': [
+    'imagens/dining_table.jpg': [
         'https://raw.githubusercontent.com/pytorch/hub/master/images/cat.jpg',
         'https://picsum.photos/seed/cat/400/300',
     ],
@@ -270,8 +272,8 @@ else:
 
 """
 
-if os.path.exists('imagens/cat.jpg'):
-    classify('imagens/cat.jpg', top_k=10)
+if os.path.exists('imagens/dining_table.jpg'):
+    classify('imagens/dining_table.jpg', top_k=10)
 else:
     print("Imagem não disponível.")
 
@@ -355,6 +357,8 @@ def plot_score_distribution(image_path, top_k=20):
                 f'{score*100:.1f}%', va='center', fontsize=9)
 
     plt.tight_layout()
+    basename = os.path.splitext(os.path.basename(image_path))[0]
+    plt.savefig(f"resultado/{basename}_score_distribution.png", bbox_inches='tight')
     plt.show()
 
     print(
@@ -421,6 +425,8 @@ def test_different_sizes(image_path, sizes=[299, 150, 100, 50, 25]):
 
     plt.suptitle("Efeito da Resolução na Classificação", fontsize=13, y=1.02)
     plt.tight_layout()
+    basename = os.path.splitext(os.path.basename(image_path))[0]
+    plt.savefig(f"resultado/{basename}_different_sizes.png", bbox_inches='tight')
     plt.show()
 
 
@@ -484,6 +490,8 @@ def visualize_feature_maps(image_path, layer_name='mixed0', n_features=16):
     plt.suptitle(f"Feature Maps — Camada '{layer_name}' ({activations.shape[-1]} filtros)",
                  fontsize=12, y=1.01)
     plt.tight_layout()
+    basename = os.path.splitext(os.path.basename(image_path))[0]
+    plt.savefig(f"resultado/{basename}_feature_maps_{layer_name}.png", bbox_inches='tight')
     plt.show()
 
 
@@ -631,6 +639,7 @@ ax.set_title(
 ax.grid(True, alpha=0.3)
 ax.set_xlim(-5, 150)
 plt.tight_layout()
+plt.savefig("resultado/comparacao_arquiteturas.png", bbox_inches='tight')
 plt.show()
 
 """## Conclusão
@@ -653,24 +662,6 @@ Neste tutorial, aprendemos a:
 | Pré-processamento | Manual | `preprocess_input()` |
 | Decodificação | Manual | `decode_predictions()` |
 | Transfer Learning | Complexo | Simples com `.trainable` |
-
-### Próximos Passos
-
-- **Tutorial #10**: Fine-tuning do InceptionV3 para uma tarefa personalizada
-- Experimente outras arquiteturas: `Xception`, `EfficientNet`, `ResNet`
-- Explore **Grad-CAM** para visualizar onde o modelo "olha" na imagem
-
-## Exercícios
-
-1. **Teste suas próprias imagens** — use `classify('sua_imagem.jpg')` com fotos do seu computador. O modelo acerta?
-
-2. **Compare resoluções** — pegue a mesma imagem em 25px, 50px, 100px e 299px. Em qual resolução o modelo começa a errar?
-
-3. **Explore camadas** — use `visualize_feature_maps` com diferentes `layer_name` (ex: `'mixed0'`, `'mixed5'`, `'mixed9'`). O que muda entre camadas iniciais e finais?
-
-4. **Transfer Learning** — crie um dataset pequeno (ex: 50 imagens de 2 categorias) e treine o modelo de transfer learning. Quantas épocas são necessárias para boa acurácia?
-
-5. **Compare modelos** — substitua `InceptionV3` por `Xception` ou `EfficientNetB0`. O resultado muda para a mesma imagem?
 
 ## Licença (MIT)
 
