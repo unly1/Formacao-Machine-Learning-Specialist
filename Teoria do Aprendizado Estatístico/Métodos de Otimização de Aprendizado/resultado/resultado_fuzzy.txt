@@ -1,0 +1,155 @@
+==============================================================
+   RELATÓRIO - SISTEMA DE CONTROLE FUZZY
+   Formação Machine Learning Specialist
+   Teoria do Aprendizado Estatístico
+   Métodos de Otimização de Aprendizado
+==============================================================
+   Gerado em: 23/05/2026 11:56:31
+==============================================================
+
+CONCEITO:
+  A Lógica Fuzzy (nebulosa) permite trabalhar com graus de
+  pertinência entre 0 e 1, modelando incerteza e linguagem
+  natural de forma matemática.
+
+PIPELINE DO SISTEMA:
+  [Entrada Crisp] → [Fuzzificação] → [Base de Regras]
+                 → [Defuzzificação] → [Saída Crisp]
+
+FUNÇÕES DE PERTINÊNCIA UTILIZADAS:
+  • Triangular  : pertinencia_triangular(x, a, b, c)
+  • Trapezoidal : pertinencia_trapezoid(x, a, b, c, d)
+  • Gaussiana   : pertinencia_gaussiana(x, media, sigma)
+
+CONJUNTOS FUZZY - TEMPERATURA (Entrada):
+  • FRIA        : Trapezoidal [0, 0, 15, 25]
+  • CONFORTÁVEL : Triangular  [15, 22, 30]
+  • QUENTE      : Trapezoidal [25, 32, 50, 50]
+
+BASE DE REGRAS (SE-ENTÃO):
+  • SE temp é FRIA        → Ventilador LENTO  (centro: 20%)
+  • SE temp é CONFORTÁVEL → Ventilador MÉDIO  (centro: 50%)
+  • SE temp é QUENTE      → Ventilador RÁPIDO (centro: 90%)
+
+DEFUZZIFICAÇÃO: Método do Centroide (Center of Gravity)
+  Fórmula: saída = Σ(μᵢ × cᵢ) / Σ(μᵢ)
+
+--------------------------------------------------------------
+RESULTADOS DOS TESTES:
+--------------------------------------------------------------
+
+  ▶ Temperatura de entrada : 5°C
+    Fuzzificação (graus de pertinência):
+      - FRIA        : 1.0
+      - CONFORTÁVEL : 0.0
+      - QUENTE      : 0.0
+    Ativação das Regras:
+      - LENTO  : 1.0
+      - MÉDIO  : 0.0
+      - RÁPIDO : 0.0
+    ✔ Velocidade do Ventilador (saída crisp): 20.0%
+    [████░░░░░░░░░░░░░░░░] 20.0%
+
+  ▶ Temperatura de entrada : 12°C
+    Fuzzificação (graus de pertinência):
+      - FRIA        : 1.0
+      - CONFORTÁVEL : 0.0
+      - QUENTE      : 0.0
+    Ativação das Regras:
+      - LENTO  : 1.0
+      - MÉDIO  : 0.0
+      - RÁPIDO : 0.0
+    ✔ Velocidade do Ventilador (saída crisp): 20.0%
+    [████░░░░░░░░░░░░░░░░] 20.0%
+
+  ▶ Temperatura de entrada : 18°C
+    Fuzzificação (graus de pertinência):
+      - FRIA        : 0.7
+      - CONFORTÁVEL : 0.4286
+      - QUENTE      : 0.0
+    Ativação das Regras:
+      - LENTO  : 0.7
+      - MÉDIO  : 0.4286
+      - RÁPIDO : 0.0
+    ✔ Velocidade do Ventilador (saída crisp): 31.39%
+    [██████░░░░░░░░░░░░░░] 31.39%
+
+  ▶ Temperatura de entrada : 22°C
+    Fuzzificação (graus de pertinência):
+      - FRIA        : 0.3
+      - CONFORTÁVEL : 1.0
+      - QUENTE      : 0.0
+    Ativação das Regras:
+      - LENTO  : 0.3
+      - MÉDIO  : 1.0
+      - RÁPIDO : 0.0
+    ✔ Velocidade do Ventilador (saída crisp): 43.08%
+    [████████░░░░░░░░░░░░] 43.08%
+
+  ▶ Temperatura de entrada : 26°C
+    Fuzzificação (graus de pertinência):
+      - FRIA        : 0.0
+      - CONFORTÁVEL : 0.5
+      - QUENTE      : 0.1429
+    Ativação das Regras:
+      - LENTO  : 0.0
+      - MÉDIO  : 0.5
+      - RÁPIDO : 0.1429
+    ✔ Velocidade do Ventilador (saída crisp): 58.89%
+    [███████████░░░░░░░░░] 58.89%
+
+  ▶ Temperatura de entrada : 30°C
+    Fuzzificação (graus de pertinência):
+      - FRIA        : 0.0
+      - CONFORTÁVEL : 0.0
+      - QUENTE      : 0.7143
+    Ativação das Regras:
+      - LENTO  : 0.0
+      - MÉDIO  : 0.0
+      - RÁPIDO : 0.7143
+    ✔ Velocidade do Ventilador (saída crisp): 90.0%
+    [██████████████████░░] 90.0%
+
+  ▶ Temperatura de entrada : 38°C
+    Fuzzificação (graus de pertinência):
+      - FRIA        : 0.0
+      - CONFORTÁVEL : 0.0
+      - QUENTE      : 1.0
+    Ativação das Regras:
+      - LENTO  : 0.0
+      - MÉDIO  : 0.0
+      - RÁPIDO : 1.0
+    ✔ Velocidade do Ventilador (saída crisp): 90.0%
+    [██████████████████░░] 90.0%
+
+  ▶ Temperatura de entrada : 45°C
+    Fuzzificação (graus de pertinência):
+      - FRIA        : 0.0
+      - CONFORTÁVEL : 0.0
+      - QUENTE      : 1.0
+    Ativação das Regras:
+      - LENTO  : 0.0
+      - MÉDIO  : 0.0
+      - RÁPIDO : 1.0
+    ✔ Velocidade do Ventilador (saída crisp): 90.0%
+    [██████████████████░░] 90.0%
+
+==============================================================
+  VANTAGENS DA LÓGICA FUZZY EM MACHINE LEARNING:
+==============================================================
+  1. Lida com incerteza e imprecisão de forma natural
+  2. Regras interpretáveis (linguagem humana)
+  3. Não requer grande volume de dados rotulados
+  4. Base para sistemas híbridos (Neuro-Fuzzy, ANFIS)
+  5. Útil em controle, classificação e tomada de decisão
+
+  APLICAÇÕES COMUNS:
+  • Controle industrial (temperatura, velocidade, pressão)
+  • Sistemas de recomendação
+  • Diagnóstico médico assistido
+  • Processamento de linguagem natural
+  • Robótica e veículos autônomos
+
+==============================================================
+  Fim do Relatório
+==============================================================
