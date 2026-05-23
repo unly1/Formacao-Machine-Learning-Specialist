@@ -1,0 +1,27 @@
+40
+Class
+positive    134
+negative     66
+Name: count, dtype: int64
+Class
+positive    123
+negative     77
+Name: count, dtype: int64
+Número de índices de treinamento: 68
+Número de índices de validação: 17
+Número de índices de treinamento: 68
+Número de índices de validação: 17
+Número de índices de treinamento: 68
+Número de índices de validação: 17
+Número de índices de treinamento: 68
+Número de índices de validação: 17
+Número de índices de treinamento: 68
+Número de índices de validação: 17
+Precisão de divisão: 150.99298148707666
+Precisão de divisão: 171.22206240542593
+Precisão de divisão: 131.72569156195593
+Precisão de divisão: 80.61940183841385
+Precisão de divisão: 221.63020627476214
+131.30323056938693
+A média dos erros é: 9.52044832324183.
+O desvio padrão dos erros é: 7.349020637882744.
