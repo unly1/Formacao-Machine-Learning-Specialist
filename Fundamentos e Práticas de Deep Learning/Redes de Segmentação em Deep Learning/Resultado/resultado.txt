@@ -1,0 +1,51 @@
+=== RESULTADO DA SEGMENTAÇÃO MASK R-CNN ===
+Imagem processada: dining_table.jpg
+Modelo: Mask R-CNN ResNet-50 FPN (COCO)
+Dispositivo: cpu
+Threshold de confiança: 0.5
+Objetos detectados: 11
+
+Objeto #1: potted plant
+  Confiança: 0.9913
+  Box: [284, 105, 346, 180]
+
+Objeto #2: person
+  Confiança: 0.9546
+  Box: [54, 37, 121, 139]
+
+Objeto #3: chair
+  Confiança: 0.9346
+  Box: [5, 183, 159, 299]
+
+Objeto #4: potted plant
+  Confiança: 0.8554
+  Box: [143, 1, 260, 66]
+
+Objeto #5: chair
+  Confiança: 0.8530
+  Box: [4, 181, 84, 284]
+
+Objeto #6: potted plant
+  Confiança: 0.7981
+  Box: [233, 14, 257, 67]
+
+Objeto #7: chair
+  Confiança: 0.7200
+  Box: [273, 177, 396, 296]
+
+Objeto #8: potted plant
+  Confiança: 0.7150
+  Box: [204, 4, 251, 68]
+
+Objeto #9: apple
+  Confiança: 0.6007
+  Box: [256, 46, 274, 66]
+
+Objeto #10: dining table
+  Confiança: 0.5657
+  Box: [16, 168, 355, 289]
+
+Objeto #11: mouse
+  Confiança: 0.5187
+  Box: [157, 192, 207, 210]
+
