@@ -49,3 +49,10 @@ ENV/
 !**/resultados_coco/**/confusion_matrix*.png
 !**/resultados_coco/**/Box*_curve.png
 !**/resultados_coco/**/val_batch*_pred.jpg
+
+# Reconhecimento Facial (Desafio)
+**/facial_recognition/dataset/
+**/facial_recognition/models/
+**/facial_recognition/outputs/detections/
+**/facial_recognition/outputs/screenshots/
+
