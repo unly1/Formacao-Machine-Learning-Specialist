@@ -1,0 +1,5 @@
+Resultado do Script de Transfer Learning:
+- Shape das features extraídas: (1, 7, 7, 2048)
+- Classes de saída no novo classificador: 2
+- Modelo base (ResNet50) congelado: Sim
+- Predição para a imagem teste: [0.4911467432975769, 0.5088532567024231]

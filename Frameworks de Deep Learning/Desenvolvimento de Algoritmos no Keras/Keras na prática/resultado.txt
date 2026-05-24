@@ -1,0 +1,4 @@
+Resultado das Predicoes (ResNet50):
+1. tabby (n02123045): 62.76%
+2. tiger_cat (n02123159): 17.16%
+3. Egyptian_cat (n02124075): 10.75%
