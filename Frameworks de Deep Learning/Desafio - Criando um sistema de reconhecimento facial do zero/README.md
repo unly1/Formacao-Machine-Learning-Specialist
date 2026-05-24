@@ -7,8 +7,6 @@ Projeto completo de **detecção e reconhecimento facial** equipado com uma **In
 | **face_recognition** | dlib HOG + SVM/KNN | Processamento veloz, sem necessidade de GPU, setup simples |
 | **TensorFlow** | MobileNetV2 (Transfer Learning) | Datasets maiores, aprendizado profundo, GPU disponível |
 
-> **Status:** 🟢 Testado, corrigido e 100% funcional no Windows 11 com Python 3.12.3
-
 ---
 
 ## 📁 Estrutura do Projeto Atualizada
