@@ -1,0 +1,9 @@
+=== RESULTADO DA VALIDAÇÃO ===
+Pesos utilizados: C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Fundamentos e Práticas de Deep Learning\Redes de Detecção em Deep Learning\resultados\runs\train\yolov8n_openimages\weights\best.pt
+Dataset YAML: C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Fundamentos e Práticas de Deep Learning\Redes de Detecção em Deep Learning\datasets\openimages_yolo\dataset.yaml
+
+Métricas de Box:
+  mAP@50      : 0.5015
+  mAP@50-95   : 0.3610
+  Precisão    : 0.7704
+  Recall      : 0.4174

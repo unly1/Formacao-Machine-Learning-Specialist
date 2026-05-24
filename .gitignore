@@ -18,3 +18,19 @@ ENV/
 *.tar.gz
 *.tgz
 *.rar
+
+# Deep Learning / YOLO files
+*.pt
+**/datasets/
+
+# Ignorar o conteúdo de resultados por padrão
+**/resultados/**
+
+# Não ignorar as subpastas de resultados para que o Git possa varrê-las
+!**/resultados/**/
+
+# Não ignorar relatórios (.txt) e imagens/gráficos (.png, .jpg, .jpeg)
+!**/resultados/**/*.txt
+!**/resultados/**/*.png
+!**/resultados/**/*.jpg
+!**/resultados/**/*.jpeg

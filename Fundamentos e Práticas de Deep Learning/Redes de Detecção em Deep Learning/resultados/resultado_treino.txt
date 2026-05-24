@@ -1,0 +1,9 @@
+=== RESULTADO DO TREINAMENTO ===
+Modelo base: yolov8n
+Épocas: 5
+Tamanho da imagem: 640
+Batch size: 8
+Dispositivo: cpu
+Dataset YAML: C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Fundamentos e Práticas de Deep Learning\Redes de Detecção em Deep Learning\datasets\openimages_yolo\dataset.yaml
+Pasta de resultados: C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Fundamentos e Práticas de Deep Learning\Redes de Detecção em Deep Learning\resultados\runs\train\yolov8n_openimages
+Melhores pesos (best.pt): C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Fundamentos e Práticas de Deep Learning\Redes de Detecção em Deep Learning\resultados\runs\train\yolov8n_openimages\weights\best.pt

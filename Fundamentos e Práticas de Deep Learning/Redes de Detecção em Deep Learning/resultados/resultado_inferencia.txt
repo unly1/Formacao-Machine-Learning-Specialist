@@ -1,0 +1,121 @@
+=== RESULTADO DA INFERÊNCIA ===
+Pesos utilizados: C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Fundamentos e Práticas de Deep Learning\Redes de Detecção em Deep Learning\resultados\runs\train\yolov8n_openimages\weights\best.pt
+Fonte das imagens: C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Fundamentos e Práticas de Deep Learning\Redes de Detecção em Deep Learning\datasets\openimages_yolo\images
+Limiar de confiança: 0.25
+
+0007cebe1b2ba653.jpg: nenhum objeto detectado
+000a045a0715d64d.jpg: nenhum objeto detectado
+000a1249af2bc5f0.jpg: nenhum objeto detectado
+001083f05db4352b.jpg: nenhum objeto detectado
+00173afdc7581c41.jpg:
+  - Person: 0.26
+001840a807e454c7.jpg: nenhum objeto detectado
+001997021f01f208.jpg: nenhum objeto detectado
+001a794d1865ee47.jpg: nenhum objeto detectado
+001a809ad40a2f84.jpg:
+  - Car: 0.26
+0022e32008e479cb.jpg: nenhum objeto detectado
+00230c216711fceb.jpg: nenhum objeto detectado
+002d1dd67c722d98.jpg: nenhum objeto detectado
+003132be85a0beae.jpg: nenhum objeto detectado
+003a5aaf6d17c917.jpg: nenhum objeto detectado
+0047534bb816eb48.jpg: nenhum objeto detectado
+004e21eb2e686f40.jpg: nenhum objeto detectado
+00575b9132bb3746.jpg: nenhum objeto detectado
+005b598d8fecb139.jpg: nenhum objeto detectado
+005ea49186b013d8.jpg:
+  - Car: 0.41
+0065e1098f7a353b.jpg: nenhum objeto detectado
+006f87bf928f9ba3.jpg: nenhum objeto detectado
+00723dac8201a83e.jpg:
+  - Car: 0.46
+  - Car: 0.29
+0081f359f925712e.jpg: nenhum objeto detectado
+008216e31b1aecf0.jpg: nenhum objeto detectado
+0082b95745cb8ed5.jpg: nenhum objeto detectado
+008637722500f239.jpg:
+  - Car: 0.36
+0089b8f6212315ec.jpg: nenhum objeto detectado
+00a159a661a2f5aa.jpg: nenhum objeto detectado
+00a1f2a6e7f78ac5.jpg: nenhum objeto detectado
+00a3654c1cf00d11.jpg: nenhum objeto detectado
+00acf53b127218c2.jpg: nenhum objeto detectado
+00b4064b073e51f3.jpg: nenhum objeto detectado
+00b562abdf5766d3.jpg: nenhum objeto detectado
+00b75a8487446cdd.jpg: nenhum objeto detectado
+00c9616a917be867.jpg: nenhum objeto detectado
+00ccda615ec9731d.jpg: nenhum objeto detectado
+00cd12b9ee1905a7.jpg: nenhum objeto detectado
+00cdf56c63191fd3.jpg: nenhum objeto detectado
+00d2a568dd4afd0d.jpg: nenhum objeto detectado
+00d33e05424ff8cc.jpg: nenhum objeto detectado
+00d9efcc4d1fda53.jpg: nenhum objeto detectado
+00dc0530e6779ca6.jpg: nenhum objeto detectado
+00dd0e03accfc071.jpg: nenhum objeto detectado
+00e1d2263a7ec1e8.jpg: nenhum objeto detectado
+00e5682d509f4b26.jpg:
+  - Car: 0.31
+00e8e1122ed9f31c.jpg: nenhum objeto detectado
+00e9084d1bc8e0ea.jpg: nenhum objeto detectado
+00ec4ba83d648c33.jpg: nenhum objeto detectado
+00ee7576fe9ebe6c.jpg: nenhum objeto detectado
+0104cba3ff87376c.jpg: nenhum objeto detectado
+010d42acb7498094.jpg: nenhum objeto detectado
+01125dd72c09cc5a.jpg: nenhum objeto detectado
+0112fe23f8a0eaaf.jpg: nenhum objeto detectado
+011417767312812e.jpg: nenhum objeto detectado
+01142f30b8bdac1a.jpg: nenhum objeto detectado
+0116632f904277c7.jpg: nenhum objeto detectado
+0119db1a3ebc3f65.jpg: nenhum objeto detectado
+0124faec67465fe5.jpg: nenhum objeto detectado
+01267ff8f7cfcdbd.jpg: nenhum objeto detectado
+012bfb1d9f9afc48.jpg: nenhum objeto detectado
+012dc31b561d4214.jpg: nenhum objeto detectado
+012ea1afd40e85ac.jpg: nenhum objeto detectado
+013b99371484d3d5.jpg: nenhum objeto detectado
+013e4b54ccdf22aa.jpg: nenhum objeto detectado
+01471c9fcf29869f.jpg:
+  - Car: 0.29
+01491bf840ae9939.jpg: nenhum objeto detectado
+014ad124c16040a4.jpg: nenhum objeto detectado
+014d85b26445629d.jpg: nenhum objeto detectado
+01585331c93c424e.jpg: nenhum objeto detectado
+015b32cb4975e12f.jpg: nenhum objeto detectado
+015d7d3a6db03a94.jpg:
+  - Car: 0.32
+015f5cd905204962.jpg: nenhum objeto detectado
+0160b5826ab10020.jpg:
+  - Car: 0.55
+0170ea8e1a33375a.jpg:
+  - Car: 0.38
+  - Car: 0.38
+017527da8bfeb97d.jpg: nenhum objeto detectado
+0175f160ca091e7e.jpg: nenhum objeto detectado
+0177ba1593d54279.jpg: nenhum objeto detectado
+017b690dbb7552db.jpg: nenhum objeto detectado
+017f34d289d6e1dc.jpg: nenhum objeto detectado
+0182bd2e43596b71.jpg: nenhum objeto detectado
+01877d79c356fad3.jpg: nenhum objeto detectado
+018bbadd96337150.jpg:
+  - Car: 0.28
+018d4a117c1d7e16.jpg: nenhum objeto detectado
+019483ccc1cc242b.jpg:
+  - Car: 0.26
+0197df7725980004.jpg: nenhum objeto detectado
+019a3d18cb357cf3.jpg: nenhum objeto detectado
+019e5df10a052b49.jpg: nenhum objeto detectado
+01a6c89f9885d483.jpg: nenhum objeto detectado
+01a89173a0001efc.jpg: nenhum objeto detectado
+01ab773186c630c4.jpg: nenhum objeto detectado
+01ada3c0d980be5e.jpg: nenhum objeto detectado
+020feca9b536f1fe.jpg:
+  - Bicycle: 0.26
+16b672c8e743d0c7.jpg: nenhum objeto detectado
+26192da5ce2afa62.jpg: nenhum objeto detectado
+496b79b5ebc9fd4e.jpg: nenhum objeto detectado
+93a22058de4a2e01.jpg: nenhum objeto detectado
+a640bec75c8b9bbb.jpg: nenhum objeto detectado
+c3b93029d5727f16.jpg: nenhum objeto detectado
+c6324f32dbc3a847.jpg: nenhum objeto detectado
+ef1bd7b718a3f6e8.jpg:
+  - Car: 0.34
