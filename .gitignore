@@ -34,3 +34,18 @@ ENV/
 !**/resultados/**/*.png
 !**/resultados/**/*.jpg
 !**/resultados/**/*.jpeg
+
+# Ignorar o conteúdo de resultados_coco por padrão
+**/resultados_coco/**
+
+# Não ignorar as subpastas de resultados_coco para que o Git possa varrê-las
+!**/resultados_coco/**/
+
+# Não ignorar relatórios (.txt) de resultados_coco
+!**/resultados_coco/**/*.txt
+
+# Não ignorar apenas as imagens mais importantes do treinamento e validação em resultados_coco
+!**/resultados_coco/**/results.png
+!**/resultados_coco/**/confusion_matrix*.png
+!**/resultados_coco/**/Box*_curve.png
+!**/resultados_coco/**/val_batch*_pred.jpg

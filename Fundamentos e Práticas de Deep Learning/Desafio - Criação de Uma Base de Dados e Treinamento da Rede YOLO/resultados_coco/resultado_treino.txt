@@ -1,0 +1,9 @@
+=== RESULTADO DO TREINAMENTO (COCO) ===
+Modelo base       : yolov8n
+Épocas            : 5
+Tamanho da imagem : 640
+Batch size        : 8
+Dispositivo       : cpu
+Dataset YAML      : C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Fundamentos e Práticas de Deep Learning\Desafio - Criação de Uma Base de Dados e Treinamento da Rede YOLO\datasets\coco_yolo\dataset.yaml
+Pasta de resultados: C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Fundamentos e Práticas de Deep Learning\Desafio - Criação de Uma Base de Dados e Treinamento da Rede YOLO\resultados_coco\runs\train\yolov8n_coco
+Melhores pesos    : C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Fundamentos e Práticas de Deep Learning\Desafio - Criação de Uma Base de Dados e Treinamento da Rede YOLO\resultados_coco\runs\train\yolov8n_coco\weights\best.pt

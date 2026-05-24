@@ -1,0 +1,181 @@
+=== RESULTADO DA INFERÊNCIA (COCO) ===
+Pesos utilizados  : C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Fundamentos e Práticas de Deep Learning\Desafio - Criação de Uma Base de Dados e Treinamento da Rede YOLO\resultados_coco\runs\train\yolov8n_coco\weights\best.pt
+Fonte das imagens : C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Fundamentos e Práticas de Deep Learning\Desafio - Criação de Uma Base de Dados e Treinamento da Rede YOLO\datasets\coco_yolo\images\validation
+Limiar de confiança: 0.25
+
+000000000139.jpg: nenhum objeto detectado
+000000000724.jpg: nenhum objeto detectado
+000000000785.jpg:
+  - person: 0.27
+000000000872.jpg: nenhum objeto detectado
+000000000885.jpg:
+  - person: 0.39
+000000001000.jpg: nenhum objeto detectado
+000000001268.jpg: nenhum objeto detectado
+000000001296.jpg: nenhum objeto detectado
+000000001353.jpg: nenhum objeto detectado
+000000001490.jpg: nenhum objeto detectado
+000000001532.jpg:
+  - car: 0.83
+  - car: 0.58
+  - car: 0.50
+  - car: 0.33
+000000001584.jpg: nenhum objeto detectado
+000000001761.jpg: nenhum objeto detectado
+000000002006.jpg: nenhum objeto detectado
+000000002153.jpg: nenhum objeto detectado
+000000002261.jpg:
+  - person: 0.29
+000000002299.jpg: nenhum objeto detectado
+000000002431.jpg: nenhum objeto detectado
+000000002473.jpg: nenhum objeto detectado
+000000002532.jpg:
+  - person: 0.30
+000000002685.jpg:
+  - person: 0.26
+000000003156.jpg:
+  - person: 0.44
+000000003255.jpg: nenhum objeto detectado
+000000003553.jpg: nenhum objeto detectado
+000000003934.jpg:
+  - person: 0.29
+000000004134.jpg:
+  - person: 0.65
+  - person: 0.63
+000000004395.jpg:
+  - person: 0.34
+000000004765.jpg: nenhum objeto detectado
+000000005001.jpg:
+  - person: 0.40
+000000005037.jpg: nenhum objeto detectado
+000000005060.jpg:
+  - person: 0.26
+000000005193.jpg:
+  - person: 0.28
+000000005529.jpg:
+  - person: 0.29
+000000005586.jpg: nenhum objeto detectado
+000000006040.jpg: nenhum objeto detectado
+000000006460.jpg: nenhum objeto detectado
+000000006471.jpg:
+  - person: 0.35
+  - person: 0.30
+  - person: 0.26
+000000006723.jpg: nenhum objeto detectado
+000000006763.jpg: nenhum objeto detectado
+000000006771.jpg:
+  - person: 0.54
+  - person: 0.30
+000000006894.jpg: nenhum objeto detectado
+000000006954.jpg:
+  - person: 0.40
+000000007088.jpg: nenhum objeto detectado
+000000007278.jpg: nenhum objeto detectado
+000000007281.jpg: nenhum objeto detectado
+000000007386.jpg: nenhum objeto detectado
+000000007511.jpg:
+  - person: 0.39
+000000007816.jpg:
+  - person: 0.30
+000000007977.jpg:
+  - person: 0.35
+000000008021.jpg: nenhum objeto detectado
+000000008211.jpg: nenhum objeto detectado
+000000008532.jpg:
+  - person: 0.34
+000000008690.jpg: nenhum objeto detectado
+000000008762.jpg: nenhum objeto detectado
+000000008844.jpg:
+  - person: 0.31
+000000011197.jpg:
+  - car: 0.43
+000000040083.jpg:
+  - car: 0.71
+  - person: 0.38
+  - car: 0.28
+000000045596.jpg: nenhum objeto detectado
+000000065350.jpg: nenhum objeto detectado
+000000067616.jpg:
+  - car: 0.72
+  - car: 0.36
+  - car: 0.34
+000000074058.jpg:
+  - car: 0.40
+000000082821.jpg: nenhum objeto detectado
+000000122166.jpg:
+  - car: 0.81
+  - car: 0.66
+000000130386.jpg:
+  - car: 0.36
+000000135410.jpg:
+  - car: 0.69
+  - car: 0.52
+000000138639.jpg: nenhum objeto detectado
+000000139099.jpg:
+  - person: 0.34
+000000144333.jpg:
+  - car: 0.72
+  - car: 0.45
+000000157756.jpg:
+  - car: 0.41
+000000162858.jpg:
+  - car: 0.76
+  - car: 0.41
+000000169996.jpg:
+  - car: 0.81
+  - bicycle: 0.32
+  - bicycle: 0.30
+000000177861.jpg: nenhum objeto detectado
+000000184324.jpg: nenhum objeto detectado
+000000184611.jpg:
+  - bicycle: 0.31
+000000210273.jpg:
+  - car: 0.48
+  - car: 0.32
+000000226417.jpg:
+  - person: 0.29
+000000254814.jpg:
+  - car: 0.36
+000000277005.jpg:
+  - car: 0.32
+000000295809.jpg:
+  - car: 0.36
+000000296649.jpg: nenhum objeto detectado
+000000301135.jpg:
+  - car: 0.52
+000000301376.jpg:
+  - car: 0.82
+000000309391.jpg:
+  - car: 0.51
+000000319607.jpg: nenhum objeto detectado
+000000338625.jpg:
+  - car: 0.52
+000000350003.jpg: nenhum objeto detectado
+000000350023.jpg: nenhum objeto detectado
+000000356612.jpg:
+  - car: 0.39
+000000357737.jpg:
+  - car: 0.41
+000000378139.jpg: nenhum objeto detectado
+000000394510.jpg:
+  - bicycle: 0.65
+  - car: 0.43
+  - person: 0.31
+  - car: 0.26
+000000411938.jpg:
+  - bicycle: 0.62
+  - bicycle: 0.29
+000000413689.jpg: nenhum objeto detectado
+000000414510.jpg:
+  - car: 0.67
+  - car: 0.32
+000000424162.jpg:
+  - car: 0.62
+000000429109.jpg: nenhum objeto detectado
+000000490936.jpg:
+  - car: 0.47
+000000492077.jpg: nenhum objeto detectado
+000000546823.jpg: nenhum objeto detectado
+000000577932.jpg:
+  - car: 0.44
+  - car: 0.35

@@ -1,0 +1,9 @@
+=== RESULTADO DA VALIDAÇÃO (COCO) ===
+Pesos utilizados : C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Fundamentos e Práticas de Deep Learning\Desafio - Criação de Uma Base de Dados e Treinamento da Rede YOLO\resultados_coco\runs\train\yolov8n_coco\weights\best.pt
+Dataset YAML     : C:\Users\moliv\Documents\Formacao-Machine-Learning-Specialist\Fundamentos e Práticas de Deep Learning\Desafio - Criação de Uma Base de Dados e Treinamento da Rede YOLO\datasets\coco_yolo\dataset.yaml
+
+Métricas de Box:
+  mAP@50      : 0.3070
+  mAP@50-95   : 0.2029
+  Precisão    : 0.7076
+  Recall      : 0.2046
