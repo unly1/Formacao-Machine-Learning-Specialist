@@ -10,7 +10,11 @@ import time
 import os
 import sys
 
-# Muda o diretório de trabalho para facial_recognition caso executado na raiz
+# Garante que o diretório de trabalho seja o da pasta onde app.py está localizado
+script_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(script_dir)
+
+# Muda o diretório de trabalho para facial_recognition caso executado na raiz do desafio
 if os.path.exists("facial_recognition"):
     os.chdir("facial_recognition")
 sys.path.append(os.getcwd())
