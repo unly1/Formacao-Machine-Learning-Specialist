@@ -1,0 +1,16 @@
+# Assistente Virtual - Dependências
+# Instale com: pip install -r requirements.txt
+
+# Speech recognition (microfone → texto)
+SpeechRecognition>=3.10.0
+pyaudio>=0.2.13          # backend de áudio para o microfone
+
+# Text-to-speech (texto → voz)
+gTTS>=2.4.0
+pygame>=2.5.0            # reprodução do áudio gerado pelo gTTS
+
+# Comandos automatizados
+wikipedia>=1.4.0         # busca na Wikipedia
+pyjokes>=0.6.0           # piadas aleatórias
+winshell>=0.6            # manipulação do Windows Shell (lixeira)
+pywin32>=306             # dependência do winshell (apenas Windows)
