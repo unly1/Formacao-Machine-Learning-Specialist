@@ -56,3 +56,9 @@ ENV/
 **/facial_recognition/outputs/detections/
 **/facial_recognition/outputs/screenshots/
 
+# Recomendação de Imagens (Desafio)
+**/Desafio - Criando um Sistema de Recomendação por Imagens Digitais/archive/
+**/Desafio - Criando um Sistema de Recomendação por Imagens Digitais/cache/
+**/Desafio - Criando um Sistema de Recomendação por Imagens Digitais/modelo_recomendacao/
+
+
