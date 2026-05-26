@@ -22,6 +22,9 @@ ENV/
 # Deep Learning / YOLO files
 *.pt
 **/datasets/
+*.weights
+**/checkpoints/
+**/outputs/
 
 # Ignorar o conteúdo de resultados por padrão
 **/resultados/**
